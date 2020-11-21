@@ -123,7 +123,7 @@ class logstash::package(
   }
 
   package { 'logstash':
-    ensure   => $package_ensure,
+    ensure   => present,
     name     => $package_name,
     source   => $package_local_file, # undef if using package manager.
     provider => $package_provider, # undef if using package manager.
